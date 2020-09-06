@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Testing installation of Dojo CLI tools ..."
+echo "Checking Dojo CLI tools for compiling a widget to a custom element ..."
 
 if [[ -z "$(node --version)" ]] ; then
   echo "Install Node first."

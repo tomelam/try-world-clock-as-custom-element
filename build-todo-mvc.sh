@@ -2,12 +2,17 @@
 
 echo "Building todo-mvc ..."
 
+echo "Testing installation of Dojo CLI tools ..."
+
 if [[ -z "$(node --version)" ]] ; then
-  echo "Node.js not found. Please install it first."
+  echo "Install Node first."
+  exit 1
 fi
 
-if [[ -z "$(npm list -g @dojo/cli)" ]]; then
-  echo "@dojo/cli not installed globally. Please install it first."
+if ! npm list @dojo/cli > /dev/null ; then
+  echo "@dojo/cli not installed locally. Please install it first:"
+  echo "npm i @dojo/cli"
+  exit 2
 fi
 
 cd examples/packages/todo-mvc

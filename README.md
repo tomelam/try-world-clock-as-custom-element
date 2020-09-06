@@ -3,5 +3,9 @@
 1. Clone the Dojo widget examples:
 `git clone https://github.com/dojo/examples`
 
-2. Run a build script, for example:
-`. build-world-clock.sh`
+2. Make the scripts executable:
+`chmod +x build* test*`
+
+3. Run a script, for example:
+`./test-cli-tools.sh`
+`./build-world-clock.sh`
