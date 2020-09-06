@@ -11,5 +11,5 @@ Use https://dojo.io/learn/custom-elements/introduction as a starting point.
 `chmod +x build* test*`
 
 4. Run a script, for example:
-`./test-cli-tools.sh`
+`./test-cli-tools.sh` or
 `./build-world-clock.sh`
