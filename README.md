@@ -10,6 +10,10 @@ Use https://dojo.io/learn/custom-elements/introduction as a starting point.
 3. Make the scripts executable:
 `chmod +x build* test*`
 
-4. Run a script, for example:
-`./test-cli-tools.sh` or
+4. Test your setup:
+`./test-cli-tools.sh`
+
+5. Build an app or widget:
+`./build-todo-mvc` or
 `./build-world-clock.sh`
+

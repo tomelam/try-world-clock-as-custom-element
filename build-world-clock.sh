@@ -2,32 +2,17 @@
 
 echo "Building world-clock, assuming github.com/dojo/examples cloned here ..."
 
-cd examples/packages/world-clock
-
-echo "Running npm init ..."
-npm init --yes
-
-echo "Testing installation of Dojo CLI tools ..."
-
-if [[ -z "$(node --version)" ]] ; then
-  echo "Install Node first."
+if [[ ! -d examples ]] ; then
+  echo "Clone the Dojo examples first:"
+  echo "git clone https://github.com/dojo/examples"
+  echo "Don't forget to edit world-clock's .dojorc file!"
   exit 1
 fi
 
-if ! npm list @dojo/cli > /dev/null ; then
-  echo "@dojo/cli not installed locally. Please install it first:"
-  echo "npm i @dojo/cli"
-  exit 2
-fi
+cd examples/packages/world-clock
 
-if ! npm list @dojo/cli-build-widget > /dev/null ; then
-  echo "@dojo/cli-build-widget not installed locally. Please install it first:"
-  echo "npm i @dojo/cli-build-widget"
-  exit 3
-fi
-
-echo "Installing ..."
-npm i
+echo "Installing packages (running npm install) ..."
+npm install
 
 echo "Building world-clock widget as a custom element ..."
 dojo build widget
