@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-echo "Building todo-mvc ..."
+echo "Building todo-mvc, assuming github.com/dojo/examples cloned here ..."
+
+cd examples/packages/todo-mvc
+
+echo "Running npm init ..."
+npm init --yes
 
 echo "Testing installation of Dojo CLI tools ..."
 
@@ -14,11 +19,6 @@ if ! npm list @dojo/cli > /dev/null ; then
   echo "npm i @dojo/cli"
   exit 2
 fi
-
-cd examples/packages/todo-mvc
-
-#echo "Running npm init ..."
-#npm init --yes
 
 echo "Installing ..."
 npm i

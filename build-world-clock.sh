@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-echo "Building world-clock ..."
+echo "Building world-clock, assuming github.com/dojo/examples cloned here ..."
+
+cd examples/packages/world-clock
+
+echo "Running npm init ..."
+npm init --yes
 
 echo "Testing installation of Dojo CLI tools ..."
 
@@ -20,11 +25,6 @@ if ! npm list @dojo/cli-build-widget > /dev/null ; then
   echo "npm i @dojo/cli-build-widget"
   exit 3
 fi
-
-cd examples/packages/world-clock
-
-#echo "Running npm init ..."
-#npm init --yes
 
 echo "Installing ..."
 npm i
