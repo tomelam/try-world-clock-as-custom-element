@@ -13,14 +13,14 @@ if [[ ! -f package.json ]] ; then
   exit 2
 fi
 
-if ! npm list @dojo/cli > /dev/null ; then
+if ! npm list -g @dojo/cli > /dev/null ; then
   echo "@dojo/cli not installed locally. Please install it first:"
-  echo "npm i @dojo/cli"
+  echo "npm i -g @dojo/cli"
   exit 3
 fi
 
-if ! npm list @dojo/cli-build-widget > /dev/null ; then
+if ! npm list -g @dojo/cli-build-widget > /dev/null ; then
   echo "@dojo/cli-build-widget not installed locally. Please install it first:"
-  echo "npm i @dojo/cli-build-widget"
+  echo "npm i -g @dojo/cli-build-widget"
   exit 4
 fi
