@@ -7,12 +7,6 @@ if [[ -z "$(node --version)" ]] ; then
   exit 1
 fi
 
-if [[ ! -f package.json ]] ; then
-  echo "Initialize the project first:"
-  echo "npm init --yes"
-  exit 2
-fi
-
 if ! npm list -g @dojo/cli > /dev/null ; then
   echo "@dojo/cli not installed locally. Please install it first:"
   echo "npm i -g @dojo/cli"
