@@ -1,5 +1,7 @@
 # Installation of Dojo widgets built as custom elements
 
+I haven't got this procedure to work. I am going to try starting with a simple widget.
+
 Use https://dojo.io/learn/custom-elements/introduction as a starting point.
 
 1. Clone the Dojo widget examples:
