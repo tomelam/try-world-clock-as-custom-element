@@ -13,8 +13,4 @@ if ! npm list -g @dojo/cli > /dev/null ; then
   exit 3
 fi
 
-if ! npm list -g @dojo/cli-build-widget > /dev/null ; then
-  echo "@dojo/cli-build-widget not installed globally. Please install it first:"
-  echo "npm i -g @dojo/cli-build-widget"
-  exit 4
-fi
+echo "@dojo/cli has been installed globally. You can build an app or widget."

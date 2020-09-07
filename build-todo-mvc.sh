@@ -11,5 +11,11 @@ fi
 
 cd examples/packages/todo-mvc
 
+if ! npm list @dojo/cli-build-widget > /dev/null ; then
+  echo "@dojo/cli-build-widget not installed locally. Please install it first:"
+  echo "npm i @dojo/cli-build-widget"
+  exit 4
+fi
+
 echo "Building and serving the app ..."
 dojo build app -w -s

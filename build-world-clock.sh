@@ -11,8 +11,14 @@ fi
 
 cd examples/packages/world-clock
 
-echo "Installing packages (running npm install) ..."
-npm install
+if ! npm list @dojo/cli-build-widget > /dev/null ; then
+  echo "@dojo/cli-build-widget not installed locally. Please install it first:"
+  echo "Run 'npm i @dojo/cli-build-widget' in examples/packages/world-clock/ ."
+  exit 2
+fi
+
+#echo "Installing packages (running npm install) ..."
+#npm install
 
 echo "Building world-clock widget as a custom element ..."
 dojo build widget
