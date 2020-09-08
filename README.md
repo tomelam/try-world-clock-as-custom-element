@@ -5,7 +5,8 @@ I haven't got this procedure to work. I am abandoing this project for now.
 ## Trial using Dojo example widgets
 
 Use https://dojo.io/learn/custom-elements/introduction as a starting point
-and try to make the procedure work using the Dojo example widgets from
+for learning how to compile Dojo widgets as custom elements.
+Try to make the procedure work using the Dojo example widgets from
 https://github.com/dojo/examples .
 
 1. Clone the Dojo widget examples:
